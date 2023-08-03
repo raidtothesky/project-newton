@@ -9,7 +9,7 @@ I recommend just downloading the `count.ipynb` and `classify.ipynb` files, uploa
 
 (and if you want to try the training code as well, you can do the same with the `apple_detection_training.ipynb`, but it does take a while to rerun the training)
 
-You can try running those on your own machines by first installing all the requirements via `pip install -r requirements.txt`. However, this work uses Ultralytics and Roboflow as the core packages, and they currently have pathing issues which still need to be fixed manually. You would need to do this yourself and it's painful. I don't recommend it but feel free to ask me if you want to do so and you stumble upon some problems.
+You can try running those on your own machines by first installing all the requirements via `pip install -r requirements.txt`. However, this work uses Ultralytics and Roboflow as the core packages, and they currently have pathing issues which still need to be fixed manually. You would need to do this yourself and it's painful. If you use Google Colab, I have inserted scripts in the `.ipynb` files that automatically fix this, so you just need to run them.
 
 ### The models
 I have prepared 3 fine-tuned models that are used for both apple counting and classification. You can check the [folder](https://github.com/raidtothesky/project-newton/tree/main/models) to see some explanations about each of them. You can also check and rerun the training code `apple_detection_training.ipynb`.
