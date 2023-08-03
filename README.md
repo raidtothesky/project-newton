@@ -17,10 +17,10 @@ I have prepared 3 fine-tuned models that are used for both apple counting and cl
 ### The training
 I use a publicly available apple detection dataset from Roboflow to fine-tune a YOLOv8 nano model pretrained on the COCO dataset. The fine-tuning is done in multi-step to avoid catastrophic forgetting and to try to find a biased model that performs the best on the sample 41 apple image. I use Google Colab to fine-tune, which takes roughly 1-2 hours for the final tuning pipeline. But finding this pipeline, due to computational budget, was time-consuming (2-3 days) because using automated hypermarameter tuning approaches was simply not possible. I had to resort to a largely manual hyperparameter search.
 
-### The count.ipynb
+### The `count.ipynb`
 The resulting apple detection model is simply used to detect apples and count their occurrences.
 
-### The classify.ipynb
+### The `classify.ipynb`
 I use the bounding boxes from the resulting apple detection model to crop the apples and then I leverage a rule-based image processing approach using a pre-determined HSV boundary for each color red, green, and yellow. It works quite well for the given singular image but needs to be tested for other images.
 
 Ideally, one can build a color classifier if suitable training data exists. Otherwise, generating synthetic data using stable diffusion is also promising (I would do that given enough time).
